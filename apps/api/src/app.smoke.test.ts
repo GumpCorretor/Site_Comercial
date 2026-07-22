@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 
-import { buildServer } from './main.js'
+import { buildServer } from './app.js'
 
 // Teste de fumaça sugerido pela T-03: a API sobe (Nest + Fastify) e a rota
 // base + o JSON do Swagger respondem, sem abrir uma porta de rede real.
