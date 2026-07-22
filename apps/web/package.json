@@ -2,9 +2,17 @@
   "name": "@repo/web",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "echo '[web] build placeholder'",
-    "test": "echo '[web] test placeholder'",
-    "lint": "echo '[web] lint placeholder'"
+    "build": "tsc",
+    "test": "node --test dist/**/*.test.js",
+    "lint": "eslint . && prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
   }
 }

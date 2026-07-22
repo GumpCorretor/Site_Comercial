@@ -2,10 +2,21 @@
   "name": "@repo/config",
   "version": "0.0.1",
   "private": true,
-  "description": "Pacote de configurações compartilhadas (reservado para T-02)",
-  "scripts": {
-    "build": "echo '[config] build placeholder'",
-    "test": "echo '[config] test placeholder'",
-    "lint": "echo '[config] lint placeholder'"
+  "description": "Pacote de configurações compartilhadas — tsconfig, eslint, prettier",
+  "type": "module",
+  "exports": {
+    "./tsconfig/base": "./tsconfig/base.json",
+    "./eslint": "./eslint/index.js",
+    "./prettier": "./prettier/index.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.0.0"
   }
 }

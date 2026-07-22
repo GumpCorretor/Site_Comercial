@@ -8,12 +8,16 @@
     "pnpm": "10.x"
   },
   "packageManager": "pnpm@10.34.3",
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "test": "turbo run test",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "turbo": "^2.5.0"
+    "@repo/config": "workspace:*",
+    "turbo": "^2.5.0",
+    "typescript": "^5.5.0"
   }
 }
