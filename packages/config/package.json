@@ -1,0 +1,11 @@
+{
+  "name": "@repo/config",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Pacote de configurações compartilhadas (reservado para T-02)",
+  "scripts": {
+    "build": "echo '[config] build placeholder'",
+    "test": "echo '[config] test placeholder'",
+    "lint": "echo '[config] lint placeholder'"
+  }
+}

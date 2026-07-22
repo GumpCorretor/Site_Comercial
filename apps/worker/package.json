@@ -1,0 +1,10 @@
+{
+  "name": "@repo/worker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "echo '[worker] build placeholder'",
+    "test": "echo '[worker] test placeholder'",
+    "lint": "echo '[worker] lint placeholder'"
+  }
+}

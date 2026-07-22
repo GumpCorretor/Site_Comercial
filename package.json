@@ -1,0 +1,19 @@
+{
+  "name": "mcmv-platform",
+  "version": "0.0.1",
+  "description": "Monorepo MCMV — pnpm + Turborepo + Node 22",
+  "private": true,
+  "engines": {
+    "node": "22.14.0",
+    "pnpm": "10.x"
+  },
+  "packageManager": "pnpm@10.34.3",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  }
+}
