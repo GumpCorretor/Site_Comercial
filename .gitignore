@@ -1,9 +1,16 @@
 node_modules/
 dist/
-*.log
-.DS_Store
-.env
-.env.local
-
 .turbo/
+.vite/
+coverage/
+playwright-report/
+test-results/
 
+*.tsbuildinfo
+*.log
+
+.env
+.env.*
+!.env.example
+
+packages/db/src/generated/

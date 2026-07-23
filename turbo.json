@@ -1,15 +1,19 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".nvmrc", "pnpm-workspace.yaml"],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "env": ["VITE_API_URL"],
+      "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "outputs": []
     },
-    "lint": {},
-    "typecheck": {}
+    "lint": {
+      "outputs": []
+    },
+    "typecheck": {
+      "outputs": []
+    }
   }
 }

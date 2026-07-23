@@ -1,22 +1,16 @@
 {
-  "name": "@repo/config",
-  "version": "0.0.1",
+  "name": "@central-comercial/config",
+  "version": "0.0.0",
   "private": true,
-  "description": "Pacote de configurações compartilhadas — tsconfig, eslint, prettier",
   "type": "module",
   "exports": {
-    "./tsconfig/base": "./tsconfig/base.json",
-    "./eslint": "./eslint/index.js",
-    "./prettier": "./prettier/index.js"
+    "./eslint": "./eslint.config.mjs",
+    "./prettier": "./prettier.config.mjs",
+    "./typescript": "./tsconfig.base.json"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.0.0",
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "globals": "^15.0.0",
-    "prettier": "^3.3.0",
-    "typescript": "^5.5.0",
-    "typescript-eslint": "^8.0.0"
+  "scripts": {
+    "build": "node -e \"process.exit(0)\"",
+    "test": "node -e \"process.exit(0)\"",
+    "lint": "eslint ."
   }
 }
