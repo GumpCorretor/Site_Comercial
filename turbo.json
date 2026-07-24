@@ -2,17 +2,41 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "outputs": ["dist/**"],
-      "env": ["VITE_API_URL"],
-      "dependsOn": ["^build"]
+      "outputs": [
+        "dist/**"
+      ],
+      "env": [
+        "VITE_API_URL"
+      ],
+      "dependsOn": [
+        "^build"
+      ]
     },
     "test": {
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": []
     },
     "lint": {
       "outputs": []
     },
     "typecheck": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    },
+    "@central-comercial/db#typecheck": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": []
+    },
+    "@central-comercial/db#test": {
+      "dependsOn": [
+        "build"
+      ],
       "outputs": []
     }
   }

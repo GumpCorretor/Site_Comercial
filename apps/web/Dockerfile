@@ -4,7 +4,7 @@ ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
 
 RUN corepack enable \
-  && corepack prepare pnpm@11.15.1 --activate
+  && corepack prepare pnpm@11.17.0 --activate
 
 WORKDIR /workspace
 

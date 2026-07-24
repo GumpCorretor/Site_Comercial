@@ -103,7 +103,7 @@ $rootPackage = [ordered]@{
     typescript = "^5.0.0"
     "typescript-eslint" = "^8.0.0"
   }
-  packageManager = "pnpm@11.15.1"
+  packageManager = "pnpm@11.17.0"
 }
 
 $dbPackage = [ordered]@{
