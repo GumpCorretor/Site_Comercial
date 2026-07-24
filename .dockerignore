@@ -1,0 +1,16 @@
+.git
+.vscode
+node_modules
+**/node_modules
+dist
+**/dist
+.turbo
+**/.turbo
+coverage
+playwright-report
+test-results
+.env
+.env.*
+**/.env
+**/.env.*
+*.log

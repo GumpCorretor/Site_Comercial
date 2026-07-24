@@ -1,10 +1,8 @@
-import { run } from './runner.js'
+import { startWorkerProcess } from './start-worker-process.js';
 
-async function main(): Promise<void> {
-  await run()
+try {
+  startWorkerProcess();
+} catch (error: unknown) {
+  console.error(error instanceof Error ? error.message : error);
+  process.exitCode = 1;
 }
-
-main().catch((error) => {
-  console.error(error)
-  process.exit(1)
-})

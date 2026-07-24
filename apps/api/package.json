@@ -1,31 +1,30 @@
 {
-  "name": "@repo/api",
-  "version": "0.0.1",
+  "name": "@central-comercial/api",
+  "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "nest build",
+    "dev": "nest start --watch",
     "start": "node dist/main.js",
-    "dev": "node --watch dist/main.js",
-    "test": "node --test dist/**/*.test.js",
-    "lint": "eslint . && prettier --check .",
-    "typecheck": "tsc --noEmit"
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@fastify/static": "^6.12.0",
-    "@nestjs/common": "^10.4.1",
-    "@nestjs/core": "^10.4.1",
-    "@nestjs/platform-fastify": "^10.4.1",
-    "@nestjs/swagger": "^7.4.0",
-    "fastify": "^4.28.1",
+    "@central-comercial/db": "workspace:*",
+    "@fastify/static": "9.3.0",
+    "@nestjs/common": "^11.1.28",
+    "@nestjs/core": "^11.1.28",
+    "@nestjs/platform-fastify": "^11.1.28",
+    "@nestjs/swagger": "^11.4.6",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "@repo/config": "workspace:*",
+    "@central-comercial/config": "workspace:*",
+    "@nestjs/cli": "^11.0.24",
     "@types/node": "^22.0.0",
-    "eslint": "^9.0.0",
-    "prettier": "^3.3.0",
-    "typescript": "^5.5.0"
+    "eslint": "9.39.5",
+    "vitest": "^4.1.10"
   }
 }

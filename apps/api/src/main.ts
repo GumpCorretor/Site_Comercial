@@ -1,15 +1,17 @@
-import { buildServer } from './app.js'
+import 'reflect-metadata';
 
-const DEFAULT_PORT = 3001
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 
-async function main(): Promise<void> {
-  const app = await buildServer()
-  const port = Number(process.env.PORT ?? DEFAULT_PORT)
-  await app.listen(port, '0.0.0.0')
-  console.log(`api (nest+fastify) listening on ${port}`)
+import { startApi } from './start-api';
+
+const workspaceEnvironmentPath = resolve(__dirname, '../../..', '.env');
+
+if (existsSync(workspaceEnvironmentPath)) {
+  process.loadEnvFile(workspaceEnvironmentPath);
 }
 
-main().catch((error) => {
-  console.error(error)
-  process.exit(1)
-})
+void startApi().catch((error: unknown) => {
+  console.error(error instanceof Error ? error.message : error);
+  process.exitCode = 1;
+});

@@ -1,28 +1,27 @@
 {
-  "name": "@repo/web",
-  "version": "0.0.1",
+  "name": "@central-comercial/web",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "node --test tests/*.test.mjs",
-    "lint": "eslint . && prettier --check .",
-    "typecheck": "tsc --noEmit"
+    "build": "pnpm run typecheck && vite build",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@repo/config": "workspace:*",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.3.0",
-    "eslint": "^9.0.0",
-    "prettier": "^3.3.0",
-    "typescript": "^5.5.0",
-    "vite": "^5.4.0"
+    "@vitejs/plugin-react": "^6.0.0",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@playwright/test": "^1.55.0"
   }
 }

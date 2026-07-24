@@ -1,15 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { App } from './App'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
-const root = document.getElementById('root')
+import { App } from './app';
+import { readWebEnvironment } from './config/environment';
 
-if (!root) {
-  throw new Error('#root element not found')
+const rootElement = globalThis.document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Elemento raiz não encontrado.');
 }
 
-createRoot(root).render(
+const environment = readWebEnvironment();
+
+createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <App apiUrl={environment.VITE_API_URL} />
   </StrictMode>,
-)
+);

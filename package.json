@@ -7,6 +7,10 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "dev:api": "pnpm --filter @central-comercial/api dev",
+    "db:generate": "pnpm --filter @central-comercial/db prisma:generate",
+    "db:migrate": "pnpm --filter @central-comercial/db prisma:migrate:deploy",
+    "db:status": "pnpm --filter @central-comercial/db prisma:migrate:status",
     "test": "turbo run test",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",

@@ -1,21 +1,21 @@
 {
-  "name": "@repo/worker",
-  "version": "0.0.1",
+  "name": "@central-comercial/worker",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "node --watch dist/index.js",
-    "test": "node --test dist/**/*.test.js",
-    "lint": "eslint . && prettier --check .",
-    "typecheck": "tsc --noEmit"
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start:prod": "node dist/index.js",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {
-    "@repo/config": "workspace:*",
+    "@central-comercial/config": "workspace:*",
     "@types/node": "^22.0.0",
-    "eslint": "^9.0.0",
-    "prettier": "^3.3.0",
-    "typescript": "^5.5.0"
+    "tsx": "^4.23.1",
+    "vitest": "^4.1.0"
   }
 }
